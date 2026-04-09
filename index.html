@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,186 +37,186 @@ body::before {
 .wrapper { position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:48px 32px; }
 
 /* HEADER */
-header { display:grid; grid-template-columns:1fr auto; align-items:end; border-bottom:1.5px solid var(--ink); padding-bottom:20px; margin-bottom:40px; animation:fadeDown .7s ease both; }
+header { display:grid; grid-template-columns:1fr auto; align-items:end; border-bottom:1.5px solid var(–ink); padding-bottom:20px; margin-bottom:40px; animation:fadeDown .7s ease both; }
 .header-left h1 { font-size:clamp(2.4rem,5vw,4rem); font-weight:300; letter-spacing:-.02em; line-height:1; }
-.header-left h1 em { font-style:italic; color:var(--terracotta); }
-.header-left .subtitle { font-family:'DM Mono',monospace; font-size:.7rem; letter-spacing:.15em; color:var(--light-ink); text-transform:uppercase; margin-top:8px; }
+.header-left h1 em { font-style:italic; color:var(–terracotta); }
+.header-left .subtitle { font-family:‘DM Mono’,monospace; font-size:.7rem; letter-spacing:.15em; color:var(–light-ink); text-transform:uppercase; margin-top:8px; }
 .header-right { text-align:right; }
-.day-big { font-size:2.8rem; font-family:'Cormorant Garamond',serif; font-weight:300; line-height:1; display:block; }
-.date-str { font-family:'DM Mono',monospace; font-size:.68rem; color:var(--light-ink); letter-spacing:.08em; }
+.day-big { font-size:2.8rem; font-family:‘Cormorant Garamond’,serif; font-weight:300; line-height:1; display:block; }
+.date-str { font-family:‘DM Mono’,monospace; font-size:.68rem; color:var(–light-ink); letter-spacing:.08em; }
 
 /* SECTION LABEL */
-.section-label { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--light-ink); margin-bottom:16px; display:flex; align-items:center; gap:12px; }
-.section-label::after { content:''; flex:1; height:1px; background:var(--rule); }
+.section-label { font-family:‘DM Mono’,monospace; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(–light-ink); margin-bottom:16px; display:flex; align-items:center; gap:12px; }
+.section-label::after { content:’’; flex:1; height:1px; background:var(–rule); }
 
 /* CARD */
-.card { background:var(--cream); border:1px solid var(--rule); border-radius:3px; padding:24px; position:relative; transition:box-shadow .25s,transform .25s; }
+.card { background:var(–cream); border:1px solid var(–rule); border-radius:3px; padding:24px; position:relative; transition:box-shadow .25s,transform .25s; }
 .card:hover { box-shadow:4px 6px 20px rgba(26,23,20,.08); transform:translateY(-2px); }
 .card-accent { position:absolute; top:0; left:0; width:3px; height:100%; border-radius:3px 0 0 3px; }
-.accent-terracotta{background:var(--terracotta)}.accent-sage{background:var(--sage)}.accent-blue{background:var(--dusty-blue)}.accent-gold{background:var(--gold)}.accent-blush{background:var(--blush)}.accent-mauve{background:var(--mauve)}.accent-ink{background:var(--ink)}
-.card-title { font-size:.6rem; font-family:'DM Mono',monospace; letter-spacing:.18em; text-transform:uppercase; color:var(--light-ink); margin-bottom:14px; }
+.accent-terracotta{background:var(–terracotta)}.accent-sage{background:var(–sage)}.accent-blue{background:var(–dusty-blue)}.accent-gold{background:var(–gold)}.accent-blush{background:var(–blush)}.accent-mauve{background:var(–mauve)}.accent-ink{background:var(–ink)}
+.card-title { font-size:.6rem; font-family:‘DM Mono’,monospace; letter-spacing:.18em; text-transform:uppercase; color:var(–light-ink); margin-bottom:14px; }
 
 /* LIST ITEMS */
-.focus-item { display:flex; align-items:flex-start; gap:10px; padding:8px 0; border-bottom:1px solid var(--rule); }
+.focus-item { display:flex; align-items:flex-start; gap:10px; padding:8px 0; border-bottom:1px solid var(–rule); }
 .focus-item:last-of-type { border-bottom:none; }
-.focus-check { width:14px; height:14px; border:1.5px solid var(--rule); border-radius:2px; flex-shrink:0; margin-top:3px; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; font-size:10px; }
-.focus-check.done { background:var(--terracotta); border-color:var(--terracotta); color:white; }
+.focus-check { width:14px; height:14px; border:1.5px solid var(–rule); border-radius:2px; flex-shrink:0; margin-top:3px; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; font-size:10px; }
+.focus-check.done { background:var(–terracotta); border-color:var(–terracotta); color:white; }
 .focus-text { font-size:.95rem; line-height:1.4; flex:1; transition:color .2s; }
-.focus-text.done { color:var(--light-ink); text-decoration:line-through; text-decoration-color:var(--rule); }
-.focus-tag { font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.1em; padding:2px 6px; border-radius:2px; flex-shrink:0; align-self:center; }
-.tag-work    { background:rgba(196,112,74,.12); color:var(--terracotta); }
-.tag-venture { background:rgba(122,143,114,.12); color:var(--sage); }
+.focus-text.done { color:var(–light-ink); text-decoration:line-through; text-decoration-color:var(–rule); }
+.focus-tag { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.1em; padding:2px 6px; border-radius:2px; flex-shrink:0; align-self:center; }
+.tag-work    { background:rgba(196,112,74,.12); color:var(–terracotta); }
+.tag-venture { background:rgba(122,143,114,.12); color:var(–sage); }
 .tag-baby    { background:rgba(212,160,144,.15); color:#b07060; }
-.tag-home    { background:rgba(122,143,163,.12); color:var(--dusty-blue); }
-.tag-admin   { background:rgba(184,151,90,.12);  color:var(--gold); }
-.tag-misc    { background:rgba(158,126,138,.12); color:var(--mauve); }
+.tag-home    { background:rgba(122,143,163,.12); color:var(–dusty-blue); }
+.tag-admin   { background:rgba(184,151,90,.12);  color:var(–gold); }
+.tag-misc    { background:rgba(158,126,138,.12); color:var(–mauve); }
 
 /* ADD ROW */
-.add-row { display:flex; gap:8px; margin-top:14px; padding-top:12px; border-top:1px solid var(--rule); flex-wrap:wrap; }
-.add-input { flex:1; background:transparent; border:none; border-bottom:1px solid var(--rule); font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--ink); padding:4px 0; outline:none; transition:border-color .2s; min-width:80px; }
-.add-input:focus { border-color:var(--terracotta); }
-.add-input::placeholder { color:var(--rule); font-style:italic; }
-.add-btn { font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; background:var(--ink); color:var(--cream); border:none; padding:6px 14px; cursor:pointer; border-radius:2px; transition:background .2s; white-space:nowrap; }
-.add-btn:hover { background:var(--terracotta); }
-.mini-select { font-family:'DM Mono',monospace; font-size:.6rem; border:1px solid var(--rule); background:transparent; padding:4px 8px; border-radius:2px; color:var(--light-ink); cursor:pointer; }
-.del-btn { background:none; border:none; cursor:pointer; color:var(--rule); font-size:1rem; flex-shrink:0; align-self:center; transition:color .2s; }
-.del-btn:hover { color:var(--terracotta); }
+.add-row { display:flex; gap:8px; margin-top:14px; padding-top:12px; border-top:1px solid var(–rule); flex-wrap:wrap; }
+.add-input { flex:1; background:transparent; border:none; border-bottom:1px solid var(–rule); font-family:‘Cormorant Garamond’,serif; font-size:.9rem; color:var(–ink); padding:4px 0; outline:none; transition:border-color .2s; min-width:80px; }
+.add-input:focus { border-color:var(–terracotta); }
+.add-input::placeholder { color:var(–rule); font-style:italic; }
+.add-btn { font-family:‘DM Mono’,monospace; font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; background:var(–ink); color:var(–cream); border:none; padding:6px 14px; cursor:pointer; border-radius:2px; transition:background .2s; white-space:nowrap; }
+.add-btn:hover { background:var(–terracotta); }
+.mini-select { font-family:‘DM Mono’,monospace; font-size:.6rem; border:1px solid var(–rule); background:transparent; padding:4px 8px; border-radius:2px; color:var(–light-ink); cursor:pointer; }
+.del-btn { background:none; border:none; cursor:pointer; color:var(–rule); font-size:1rem; flex-shrink:0; align-self:center; transition:color .2s; }
+.del-btn:hover { color:var(–terracotta); }
 
 /* VENTURES */
 .ventures-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-.venture-card { background:var(--cream); border:1px solid var(--rule); border-radius:3px; padding:20px; position:relative; overflow:hidden; transition:box-shadow .25s,transform .25s; }
+.venture-card { background:var(–cream); border:1px solid var(–rule); border-radius:3px; padding:20px; position:relative; overflow:hidden; transition:box-shadow .25s,transform .25s; }
 .venture-card:hover { box-shadow:4px 6px 20px rgba(26,23,20,.08); transform:translateY(-2px); }
-.venture-card::after { content:attr(data-num); position:absolute; bottom:-8px; right:12px; font-size:4.5rem; font-family:'Cormorant Garamond',serif; font-weight:300; color:rgba(26,23,20,.04); line-height:1; pointer-events:none; }
+.venture-card::after { content:attr(data-num); position:absolute; bottom:-8px; right:12px; font-size:4.5rem; font-family:‘Cormorant Garamond’,serif; font-weight:300; color:rgba(26,23,20,.04); line-height:1; pointer-events:none; }
 .venture-name { font-size:1.25rem; font-weight:300; letter-spacing:-.01em; margin-bottom:3px; }
 .venture-name em { font-style:italic; }
-.venture-tagline { font-family:'DM Mono',monospace; font-size:.6rem; color:var(--light-ink); letter-spacing:.08em; margin-bottom:10px; }
-.venture-status { display:flex; align-items:center; gap:6px; font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--light-ink); margin-bottom:10px; }
+.venture-tagline { font-family:‘DM Mono’,monospace; font-size:.6rem; color:var(–light-ink); letter-spacing:.08em; margin-bottom:10px; }
+.venture-status { display:flex; align-items:center; gap:6px; font-family:‘DM Mono’,monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(–light-ink); margin-bottom:10px; }
 .status-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
-.dot-active { background:var(--sage); animation:pulse 2s infinite; }
-.dot-building { background:var(--gold); }
-.dot-bg { background:var(--blush); opacity:.7; }
-.venture-next { font-size:.82rem; line-height:1.45; color:var(--light-ink); font-style:italic; padding-top:10px; border-top:1px solid var(--rule); }
-.venture-next strong { font-style:normal; font-weight:400; color:var(--ink); display:block; font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
+.dot-active { background:var(–sage); animation:pulse 2s infinite; }
+.dot-building { background:var(–gold); }
+.dot-bg { background:var(–blush); opacity:.7; }
+.venture-next { font-size:.82rem; line-height:1.45; color:var(–light-ink); font-style:italic; padding-top:10px; border-top:1px solid var(–rule); }
+.venture-next strong { font-style:normal; font-weight:400; color:var(–ink); display:block; font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
 
 /* PROGRESS */
 .progress-wrap { margin-bottom:4px; }
 .prog-label-row { display:flex; justify-content:space-between; margin-bottom:5px; }
-.prog-label { font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.1em; text-transform:uppercase; color:var(--light-ink); }
-.prog-pct { font-family:'DM Mono',monospace; font-size:.58rem; color:var(--ink); }
-.prog-track { height:4px; background:var(--rule); border-radius:4px; overflow:hidden; }
+.prog-label { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.1em; text-transform:uppercase; color:var(–light-ink); }
+.prog-pct { font-family:‘DM Mono’,monospace; font-size:.58rem; color:var(–ink); }
+.prog-track { height:4px; background:var(–rule); border-radius:4px; overflow:hidden; }
 .prog-fill { height:100%; border-radius:4px; transition:width .6s cubic-bezier(.4,0,.2,1); }
-.fill-sage { background:var(--sage); }
-.fill-blue { background:var(--dusty-blue); }
+.fill-sage { background:var(–sage); }
+.fill-blue { background:var(–dusty-blue); }
 .milestone-row { display:flex; align-items:center; gap:8px; padding:4px 0; }
 .milestone-row span { font-size:.82rem; }
 
 /* BABY */
-.baby-row { display:flex; align-items:center; gap:12px; padding:9px 0; border-bottom:1px solid var(--rule); }
+.baby-row { display:flex; align-items:center; gap:12px; padding:9px 0; border-bottom:1px solid var(–rule); }
 .baby-row:last-of-type { border-bottom:none; }
 .baby-icon { font-size:1.1rem; width:26px; text-align:center; flex-shrink:0; }
 .baby-info { flex:1; }
 .baby-label { font-size:.85rem; }
-.baby-note { font-family:'DM Mono',monospace; font-size:.58rem; color:var(--light-ink); }
-.log-btn { font-family:'DM Mono',monospace; font-size:.55rem; border:1px solid var(--rule); background:transparent; padding:3px 8px; border-radius:2px; cursor:pointer; color:var(--light-ink); transition:all .2s; white-space:nowrap; }
-.log-btn:hover { border-color:var(--blush); color:var(--blush); }
+.baby-note { font-family:‘DM Mono’,monospace; font-size:.58rem; color:var(–light-ink); }
+.log-btn { font-family:‘DM Mono’,monospace; font-size:.55rem; border:1px solid var(–rule); background:transparent; padding:3px 8px; border-radius:2px; cursor:pointer; color:var(–light-ink); transition:all .2s; white-space:nowrap; }
+.log-btn:hover { border-color:var(–blush); color:var(–blush); }
 
 /* CREATIVE */
 .creative-box { background:linear-gradient(135deg,rgba(196,112,74,.06),rgba(184,151,90,.09)); border:1px dashed rgba(196,112,74,.3); border-radius:3px; padding:18px 20px; display:flex; align-items:center; gap:18px; margin-bottom:14px; }
 .creative-big-icon { font-size:2rem; flex-shrink:0; }
 .creative-body { flex:1; }
-.creative-eyebrow { font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.18em; text-transform:uppercase; color:var(--terracotta); margin-bottom:4px; }
+.creative-eyebrow { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.18em; text-transform:uppercase; color:var(–terracotta); margin-bottom:4px; }
 .creative-headline { font-size:1.05rem; font-style:italic; line-height:1.4; }
-.creative-meta { font-family:'DM Mono',monospace; font-size:.56rem; color:var(--light-ink); margin-top:3px; }
-.spin-btn { font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; background:transparent; border:1px solid var(--terracotta); color:var(--terracotta); padding:6px 14px; border-radius:2px; cursor:pointer; transition:all .2s; flex-shrink:0; }
-.spin-btn:hover { background:var(--terracotta); color:white; }
-.creative-done-label { display:flex; align-items:center; gap:8px; cursor:pointer; font-size:.9rem; color:var(--light-ink); font-style:italic; }
-.creative-done-label input { accent-color:var(--terracotta); width:14px; height:14px; cursor:pointer; }
-.creative-done-label.done-today { color:var(--terracotta); }
+.creative-meta { font-family:‘DM Mono’,monospace; font-size:.56rem; color:var(–light-ink); margin-top:3px; }
+.spin-btn { font-family:‘DM Mono’,monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; background:transparent; border:1px solid var(–terracotta); color:var(–terracotta); padding:6px 14px; border-radius:2px; cursor:pointer; transition:all .2s; flex-shrink:0; }
+.spin-btn:hover { background:var(–terracotta); color:white; }
+.creative-done-label { display:flex; align-items:center; gap:8px; cursor:pointer; font-size:.9rem; color:var(–light-ink); font-style:italic; }
+.creative-done-label input { accent-color:var(–terracotta); width:14px; height:14px; cursor:pointer; }
+.creative-done-label.done-today { color:var(–terracotta); }
 
 /* IDEAS */
-.idea-item { display:flex; align-items:flex-start; gap:10px; padding:8px 0; border-bottom:1px solid var(--rule); }
+.idea-item { display:flex; align-items:flex-start; gap:10px; padding:8px 0; border-bottom:1px solid var(–rule); }
 .idea-item:last-of-type { border-bottom:none; }
-.idea-bullet { color:var(--gold); font-size:1.1rem; line-height:1.2; flex-shrink:0; }
+.idea-bullet { color:var(–gold); font-size:1.1rem; line-height:1.2; flex-shrink:0; }
 .idea-text { font-size:.95rem; flex:1; line-height:1.4; }
-.idea-chip { font-family:'DM Mono',monospace; font-size:.52rem; padding:2px 6px; border-radius:2px; background:rgba(184,151,90,.12); color:var(--gold); flex-shrink:0; align-self:center; }
+.idea-chip { font-family:‘DM Mono’,monospace; font-size:.52rem; padding:2px 6px; border-radius:2px; background:rgba(184,151,90,.12); color:var(–gold); flex-shrink:0; align-self:center; }
 
 /* PRESCHOOL */
-.school-item { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--rule); flex-wrap:wrap; }
+.school-item { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(–rule); flex-wrap:wrap; }
 .school-item:last-of-type { border-bottom:none; }
 .school-name-text { font-size:.95rem; flex:1; min-width:120px; }
-.school-badge { font-family:'DM Mono',monospace; font-size:.52rem; letter-spacing:.08em; padding:3px 9px; border-radius:20px; cursor:pointer; border:1px solid; white-space:nowrap; transition:all .2s; }
-.s-prospect { background:rgba(122,143,163,.1); color:var(--dusty-blue); border-color:rgba(122,143,163,.3); }
-.s-reached  { background:rgba(184,151,90,.1);  color:var(--gold);       border-color:rgba(184,151,90,.3);  }
-.s-toured   { background:rgba(122,143,114,.1); color:var(--sage);       border-color:rgba(122,143,114,.3); }
-.s-love     { background:rgba(196,112,74,.1);  color:var(--terracotta); border-color:rgba(196,112,74,.3);  }
-.s-pass     { background:rgba(90,85,80,.08);   color:var(--light-ink);  border-color:rgba(90,85,80,.2); text-decoration:line-through; }
-.school-note-inp { font-family:'DM Mono',monospace; font-size:.58rem; background:transparent; border:none; border-bottom:1px dashed var(--rule); outline:none; color:var(--light-ink); width:110px; padding:2px 0; }
-.school-note-inp:focus { border-color:var(--dusty-blue); }
+.school-badge { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.08em; padding:3px 9px; border-radius:20px; cursor:pointer; border:1px solid; white-space:nowrap; transition:all .2s; }
+.s-prospect { background:rgba(122,143,163,.1); color:var(–dusty-blue); border-color:rgba(122,143,163,.3); }
+.s-reached  { background:rgba(184,151,90,.1);  color:var(–gold);       border-color:rgba(184,151,90,.3);  }
+.s-toured   { background:rgba(122,143,114,.1); color:var(–sage);       border-color:rgba(122,143,114,.3); }
+.s-love     { background:rgba(196,112,74,.1);  color:var(–terracotta); border-color:rgba(196,112,74,.3);  }
+.s-pass     { background:rgba(90,85,80,.08);   color:var(–light-ink);  border-color:rgba(90,85,80,.2); text-decoration:line-through; }
+.school-note-inp { font-family:‘DM Mono’,monospace; font-size:.58rem; background:transparent; border:none; border-bottom:1px dashed var(–rule); outline:none; color:var(–light-ink); width:110px; padding:2px 0; }
+.school-note-inp:focus { border-color:var(–dusty-blue); }
 
 /* HABITS */
 .habits-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-.habit-tile { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:14px 8px; border:1px solid var(--rule); border-radius:3px; cursor:pointer; transition:all .2s; background:transparent; text-align:center; position:relative; overflow:hidden; }
-.habit-tile.done { background:var(--ink); border-color:var(--ink); }
-.habit-tile.done .habit-icon,.habit-tile.done .habit-name { color:var(--cream); }
+.habit-tile { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:14px 8px; border:1px solid var(–rule); border-radius:3px; cursor:pointer; transition:all .2s; background:transparent; text-align:center; position:relative; overflow:hidden; }
+.habit-tile.done { background:var(–ink); border-color:var(–ink); }
+.habit-tile.done .habit-icon,.habit-tile.done .habit-name { color:var(–cream); }
 .habit-icon { font-size:1.4rem; transition:transform .2s; }
 .habit-tile:hover .habit-icon { transform:scale(1.1); }
-.habit-name { font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(--light-ink); }
-.habit-tile.done .habit-name { color:var(--cream); }
-.habit-check { position:absolute; top:5px; right:7px; font-size:.65rem; color:var(--sage); }
-.habit-score { font-family:'DM Mono',monospace; font-size:.58rem; color:var(--light-ink); margin-top:12px; display:flex; justify-content:space-between; }
+.habit-name { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); }
+.habit-tile.done .habit-name { color:var(–cream); }
+.habit-check { position:absolute; top:5px; right:7px; font-size:.65rem; color:var(–sage); }
+.habit-score { font-family:‘DM Mono’,monospace; font-size:.58rem; color:var(–light-ink); margin-top:12px; display:flex; justify-content:space-between; }
 
 /* CALLBACKS */
-.cb-item { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--rule); }
+.cb-item { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(–rule); }
 .cb-item:last-of-type { border-bottom:none; }
-.cb-type-badge { font-family:'DM Mono',monospace; font-size:.52rem; letter-spacing:.08em; padding:3px 9px; border-radius:20px; border:1px solid; flex-shrink:0; cursor:pointer; transition:all .2s; }
-.cb-text  { background:rgba(122,143,163,.1); color:var(--dusty-blue); border-color:rgba(122,143,163,.3); }
-.cb-call  { background:rgba(122,143,114,.1); color:var(--sage);       border-color:rgba(122,143,114,.3); }
-.cb-email { background:rgba(184,151,90,.1);  color:var(--gold);       border-color:rgba(184,151,90,.3);  }
+.cb-type-badge { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.08em; padding:3px 9px; border-radius:20px; border:1px solid; flex-shrink:0; cursor:pointer; transition:all .2s; }
+.cb-text  { background:rgba(122,143,163,.1); color:var(–dusty-blue); border-color:rgba(122,143,163,.3); }
+.cb-call  { background:rgba(122,143,114,.1); color:var(–sage);       border-color:rgba(122,143,114,.3); }
+.cb-email { background:rgba(184,151,90,.1);  color:var(–gold);       border-color:rgba(184,151,90,.3);  }
 .cb-name { font-size:.95rem; flex:1; }
-.cb-note { font-family:'DM Mono',monospace; font-size:.58rem; color:var(--light-ink); font-style:italic; flex-shrink:0; }
-.cb-item.cb-done .cb-name { text-decoration:line-through; color:var(--light-ink); }
-.cb-action { background:none; border:none; cursor:pointer; color:var(--rule); font-size:1rem; transition:color .2s; }
-.cb-action:hover { color:var(--sage); }
+.cb-note { font-family:‘DM Mono’,monospace; font-size:.58rem; color:var(–light-ink); font-style:italic; flex-shrink:0; }
+.cb-item.cb-done .cb-name { text-decoration:line-through; color:var(–light-ink); }
+.cb-action { background:none; border:none; cursor:pointer; color:var(–rule); font-size:1rem; transition:color .2s; }
+.cb-action:hover { color:var(–sage); }
 
 /* WORK PILLS */
 .pill-bar { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
-.pill { font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:20px; border:1px solid var(--rule); color:var(--light-ink); cursor:pointer; transition:all .2s; }
-.pill.active { background:var(--ink); color:var(--cream); border-color:var(--ink); }
+.pill { font-family:‘DM Mono’,monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:20px; border:1px solid var(–rule); color:var(–light-ink); cursor:pointer; transition:all .2s; }
+.pill.active { background:var(–ink); color:var(–cream); border-color:var(–ink); }
 
 /* NOTE PAD */
-.note-pad { width:100%; background:transparent; border:none; resize:none; font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--ink); line-height:1.7; outline:none; min-height:120px; }
-.note-pad::placeholder { color:var(--rule); font-style:italic; }
-.autosave { font-family:'DM Mono',monospace; font-size:.55rem; color:var(--rule); margin-top:6px; letter-spacing:.1em; }
+.note-pad { width:100%; background:transparent; border:none; resize:none; font-family:‘Cormorant Garamond’,serif; font-size:1rem; color:var(–ink); line-height:1.7; outline:none; min-height:120px; }
+.note-pad::placeholder { color:var(–rule); font-style:italic; }
+.autosave { font-family:‘DM Mono’,monospace; font-size:.55rem; color:var(–rule); margin-top:6px; letter-spacing:.1em; }
 
 /* DIVIDERS */
-.inner-divider { height:1px; background:var(--rule); margin:14px 0; }
+.inner-divider { height:1px; background:var(–rule); margin:14px 0; }
 
 /* MEAL PLAN */
 .meal-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; }
 .meal-day { display:flex; flex-direction:column; gap:3px; }
-.meal-day-label { font-family:'DM Mono',monospace; font-size:.52rem; letter-spacing:.12em; text-transform:uppercase; color:var(--light-ink); margin-bottom:2px; }
-.meal-day-label.today-label { color:var(--blush); }
+.meal-day-label { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); margin-bottom:2px; }
+.meal-day-label.today-label { color:var(–blush); }
 .meal-slot { display:flex; align-items:center; gap:5px; }
-.meal-slot-tag { font-family:'DM Mono',monospace; font-size:.48rem; letter-spacing:.06em; color:var(--rule); width:22px; flex-shrink:0; }
-.meal-slot input { font-family:'Cormorant Garamond',serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed var(--rule); outline:none; color:var(--ink); width:100%; padding:1px 0; transition:border-color .2s; }
-.meal-slot input:focus { border-color:var(--blush); }
-.meal-slot input::placeholder { color:var(--rule); font-style:italic; }
+.meal-slot-tag { font-family:‘DM Mono’,monospace; font-size:.48rem; letter-spacing:.06em; color:var(–rule); width:22px; flex-shrink:0; }
+.meal-slot input { font-family:‘Cormorant Garamond’,serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed var(–rule); outline:none; color:var(–ink); width:100%; padding:1px 0; transition:border-color .2s; }
+.meal-slot input:focus { border-color:var(–blush); }
+.meal-slot input::placeholder { color:var(–rule); font-style:italic; }
 
 /* NANNY */
-.nanny-row { display:flex; align-items:center; gap:8px; padding:6px 0; border-bottom:1px solid var(--rule); }
+.nanny-row { display:flex; align-items:center; gap:8px; padding:6px 0; border-bottom:1px solid var(–rule); }
 .nanny-row:last-of-type { border-bottom:none; }
-.nanny-day { font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--light-ink); width:28px; flex-shrink:0; }
-.nanny-day.today-nanny { color:var(--mauve); font-weight:400; }
-.nanny-time-in,.nanny-time-out { font-family:'DM Mono',monospace; font-size:.65rem; background:transparent; border:none; border-bottom:1px dashed var(--rule); outline:none; color:var(--ink); width:52px; text-align:center; padding:2px 0; transition:border-color .2s; }
-.nanny-time-in:focus,.nanny-time-out:focus { border-color:var(--mauve); }
-.nanny-time-sep { font-family:'DM Mono',monospace; font-size:.55rem; color:var(--rule); }
-.nanny-hrs { font-family:'DM Mono',monospace; font-size:.6rem; color:var(--mauve); width:32px; text-align:right; flex-shrink:0; }
-.nanny-note-in { font-family:'Cormorant Garamond',serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed var(--rule); outline:none; color:var(--light-ink); flex:1; padding:1px 0; font-style:italic; }
-.nanny-note-in::placeholder { color:var(--rule); }
+.nanny-day { font-family:‘DM Mono’,monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(–light-ink); width:28px; flex-shrink:0; }
+.nanny-day.today-nanny { color:var(–mauve); font-weight:400; }
+.nanny-time-in,.nanny-time-out { font-family:‘DM Mono’,monospace; font-size:.65rem; background:transparent; border:none; border-bottom:1px dashed var(–rule); outline:none; color:var(–ink); width:52px; text-align:center; padding:2px 0; transition:border-color .2s; }
+.nanny-time-in:focus,.nanny-time-out:focus { border-color:var(–mauve); }
+.nanny-time-sep { font-family:‘DM Mono’,monospace; font-size:.55rem; color:var(–rule); }
+.nanny-hrs { font-family:‘DM Mono’,monospace; font-size:.6rem; color:var(–mauve); width:32px; text-align:right; flex-shrink:0; }
+.nanny-note-in { font-family:‘Cormorant Garamond’,serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed var(–rule); outline:none; color:var(–light-ink); flex:1; padding:1px 0; font-style:italic; }
+.nanny-note-in::placeholder { color:var(–rule); }
 .nanny-totals { display:flex; justify-content:space-between; align-items:baseline; }
-.nanny-total-label { font-family:'DM Mono',monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(--light-ink); }
-.nanny-total-num { font-size:1.6rem; font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--ink); }
-.nanny-total-sub { font-family:'DM Mono',monospace; font-size:.55rem; color:var(--light-ink); }
+.nanny-total-label { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); }
+.nanny-total-num { font-size:1.6rem; font-family:‘Cormorant Garamond’,serif; font-weight:300; color:var(–ink); }
+.nanny-total-sub { font-family:‘DM Mono’,monospace; font-size:.55rem; color:var(–light-ink); }
 
 /* ANIMATIONS */
 @keyframes fadeDown { from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)} }
@@ -237,21 +238,23 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 .anim6 { animation:fadeUp .7s .35s ease both; }
 
 @media(max-width:960px){
-  .g-2-1,.g-3,.g-2 { grid-template-columns:1fr 1fr; }
-  .ventures-grid { grid-template-columns:1fr 1fr; }
-  .g-3-col2 { grid-column:span 1; }
+.g-2-1,.g-3,.g-2 { grid-template-columns:1fr 1fr; }
+.ventures-grid { grid-template-columns:1fr 1fr; }
+.g-3-col2 { grid-column:span 1; }
 }
 @media(max-width:600px){
-  .wrapper{padding:24px 16px;}
-  .g-2-1,.g-3,.g-2,.ventures-grid { grid-template-columns:1fr; }
-  .habits-grid { grid-template-columns:repeat(2,1fr); }
+.wrapper{padding:24px 16px;}
+.g-2-1,.g-3,.g-2,.ventures-grid { grid-template-columns:1fr; }
+.habits-grid { grid-template-columns:repeat(2,1fr); }
 }
 </style>
+
 </head>
 <body>
 <div class="wrapper">
 
 <!-- HEADER -->
+
 <header>
   <div class="header-left">
     <h1>Jana's <em>Command</em> Center</h1>
@@ -261,6 +264,7 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 </header>
 
 <!-- ROW 1: FOCUS + BABY + NANNY -->
+
 <div class="g g-3 anim1">
 
   <div class="card">
@@ -282,6 +286,7 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
   </div>
 
   <!-- BABY MEAL PLAN -->
+
   <div class="card">
     <div class="card-accent accent-blush"></div>
     <div class="card-title">Baby Meals This Week</div>
@@ -296,9 +301,17 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
   </div>
 
   <!-- NANNY HOURS -->
+
   <div class="card">
     <div class="card-accent accent-mauve"></div>
-    <div class="card-title">Nanny Hours</div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+      <div class="card-title" style="margin-bottom:0;">Nanny Hours</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light-ink);">Rate $</span>
+        <input id="nannyRateInput" type="number" min="1" style="font-family:'DM Mono',monospace;font-size:.75rem;border:none;border-bottom:1px solid var(--rule);background:transparent;outline:none;width:40px;text-align:center;color:var(--ink);padding:2px 0;" />
+        <span style="font-family:'DM Mono',monospace;font-size:.55rem;color:var(--light-ink);">/hr</span>
+      </div>
+    </div>
     <div id="nannyWeek"></div>
     <div class="inner-divider"></div>
     <div class="nanny-totals" id="nannyTotals"></div>
@@ -307,12 +320,14 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 </div>
 
 <!-- VENTURES -->
+
 <div class="anim2">
   <div class="section-label">Ventures</div>
   <div class="ventures-grid" id="venturesGrid"></div>
 </div>
 
 <!-- PROGRESS BARS -->
+
 <div class="g g-2 anim3" style="margin-top:24px;">
 
   <div class="card">
@@ -336,6 +351,7 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 </div>
 
 <!-- CREATIVE + IDEAS + PRESCHOOL -->
+
 <div class="g g-3 anim4">
 
   <div class="card">
@@ -380,6 +396,7 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 </div>
 
 <!-- HABITS + CALLBACKS -->
+
 <div class="g g-2 anim5">
 
   <div class="card">
@@ -411,6 +428,7 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 </div>
 
 <!-- WEEKLY + BRAIN DUMP -->
+
 <div class="g g-3 anim6">
 
   <div class="card g-3-col2">
@@ -826,9 +844,16 @@ function renderMeals() {
 renderMeals();
 
 // ── NANNY HOURS ───────────────────────────────────────────────
-// nannyData: { Mon: {in:'9:00',out:'17:00',note:''}, ... }
 let nannyData = ld('jana_nanny_v2', {});
-const NANNY_RATE = ld('jana_nanny_rate', 25); // default $25/hr
+let NANNY_RATE = ld('jana_nanny_rate', 25);
+
+// Wire up the rate input once — never re-rendered
+const nannyRateEl = document.getElementById('nannyRateInput');
+nannyRateEl.value = NANNY_RATE;
+nannyRateEl.addEventListener('change', () => {
+  const r = parseFloat(nannyRateEl.value);
+  if (!isNaN(r) && r > 0) { NANNY_RATE = r; sv('jana_nanny_rate', r); renderNannyTotals(); }
+});
 
 function parseHours(timeIn, timeOut) {
   if (!timeIn || !timeOut) return null;
@@ -841,16 +866,33 @@ function parseHours(timeIn, timeOut) {
   return (b-a)/60;
 }
 
+function renderNannyTotals() {
+  let totalHrs = 0;
+  DAYS_SHORT.forEach(day => {
+    const nd = nannyData[day] || {};
+    const hrs = parseHours(nd.in, nd.out);
+    if (hrs) totalHrs += hrs;
+  });
+  const pay = totalHrs * NANNY_RATE;
+  document.getElementById('nannyTotals').innerHTML = `
+    <div>
+      <div class="nanny-total-label">Total hrs</div>
+      <div class="nanny-total-num">${totalHrs.toFixed(1)}</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="nanny-total-label">Est. pay this week</div>
+      <div class="nanny-total-num">$${pay.toFixed(0)}</div>
+    </div>`;
+}
+
 function renderNanny() {
   const el = document.getElementById('nannyWeek');
   el.innerHTML = '';
-  let totalHrs = 0;
 
   DAYS_SHORT.forEach((day, i) => {
     const isToday = i === todayDow;
     const nd = nannyData[day] || {in:'',out:'',note:''};
     const hrs = parseHours(nd.in, nd.out);
-    if (hrs) totalHrs += hrs;
 
     const row = document.createElement('div');
     row.className = 'nanny-row';
@@ -864,16 +906,7 @@ function renderNanny() {
     el.appendChild(row);
   });
 
-  const pay = totalHrs * NANNY_RATE;
-  document.getElementById('nannyTotals').innerHTML = `
-    <div>
-      <div class="nanny-total-label">Total hrs</div>
-      <div class="nanny-total-num">${totalHrs.toFixed(1)}</div>
-    </div>
-    <div style="text-align:right;">
-      <div class="nanny-total-label">Est. pay · $<input style="font-family:'DM Mono',monospace;font-size:.55rem;border:none;border-bottom:1px dashed var(--rule);background:transparent;outline:none;width:28px;text-align:center;" value="${NANNY_RATE}" onchange="updateRate(this.value)" />/hr</div>
-      <div class="nanny-total-num">$${pay.toFixed(0)}</div>
-    </div>`;
+  renderNannyTotals();
 }
 
 function saveNanny(day, field, val) {
@@ -881,11 +914,6 @@ function saveNanny(day, field, val) {
   nannyData[day][field] = val;
   sv('jana_nanny_v2', nannyData);
   renderNanny();
-}
-
-function updateRate(v) {
-  const r = parseFloat(v);
-  if (!isNaN(r)) { sv('jana_nanny_rate', r); renderNanny(); }
 }
 
 renderNanny();
@@ -900,5 +928,6 @@ const bd=document.getElementById('brainDump');
 bd.value=ld('jana_braindump','');
 bd.addEventListener('input',()=>sv('jana_braindump',bd.value));
 </script>
+
 </body>
 </html>
