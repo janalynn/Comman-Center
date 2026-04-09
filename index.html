@@ -263,9 +263,9 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
   <div class="header-right" id="hdrDate"></div>
 </header>
 
-<!-- ROW 1: FOCUS + BABY + NANNY -->
+<!-- ROW 1: TODAY'S FOCUS + WEEKLY -->
 
-<div class="g g-3 anim1">
+<div class="g g-2 anim1">
 
   <div class="card">
     <div class="card-accent accent-terracotta"></div>
@@ -284,6 +284,39 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
       <button class="add-btn" onclick="addFocus()">+ Add</button>
     </div>
   </div>
+
+  <div class="card">
+    <div class="card-accent accent-terracotta"></div>
+    <div class="card-title">Weekly</div>
+    <div class="pill-bar">
+      <div class="pill active" onclick="filterWeekly('all',this)">All</div>
+      <div class="pill" onclick="filterWeekly('urgent',this)">Urgent</div>
+      <div class="pill" onclick="filterWeekly('later',this)">Later</div>
+    </div>
+    <div id="weeklyList"></div>
+    <div class="add-row">
+      <input class="add-input" id="weeklyIn" placeholder="Add a weekly task…" />
+      <select class="mini-select" id="weeklyTag">
+        <option value="work">Work</option>
+        <option value="venture">Venture</option>
+        <option value="home">Home</option>
+        <option value="admin">Admin</option>
+        <option value="baby">Baby</option>
+        <option value="misc">Misc</option>
+      </select>
+      <select class="mini-select" id="weeklyPri">
+        <option value="later">Later</option>
+        <option value="urgent">Urgent</option>
+      </select>
+      <button class="add-btn" onclick="addWeekly()">+ Add</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ROW 2: BABY MEALS (wider) + NANNY HOURS -->
+
+<div class="g anim1" style="grid-template-columns:2fr 1fr;">
 
   <!-- BABY MEAL PLAN -->
 
@@ -427,38 +460,11 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 
 </div>
 
-<!-- WEEKLY + BRAIN DUMP -->
+<!-- BRAIN DUMP -->
 
-<div class="g g-3 anim6">
+<div class="g g-2 anim6">
 
-  <div class="card g-3-col2">
-    <div class="card-accent accent-terracotta"></div>
-    <div class="card-title">Weekly</div>
-    <div class="pill-bar">
-      <div class="pill active" onclick="filterWeekly('all',this)">All</div>
-      <div class="pill" onclick="filterWeekly('urgent',this)">Urgent</div>
-      <div class="pill" onclick="filterWeekly('later',this)">Later</div>
-    </div>
-    <div id="weeklyList"></div>
-    <div class="add-row">
-      <input class="add-input" id="weeklyIn" placeholder="Add a weekly task…" />
-      <select class="mini-select" id="weeklyTag">
-        <option value="work">Work</option>
-        <option value="venture">Venture</option>
-        <option value="home">Home</option>
-        <option value="admin">Admin</option>
-        <option value="baby">Baby</option>
-        <option value="misc">Misc</option>
-      </select>
-      <select class="mini-select" id="weeklyPri">
-        <option value="later">Later</option>
-        <option value="urgent">Urgent</option>
-      </select>
-      <button class="add-btn" onclick="addWeekly()">+ Add</button>
-    </div>
-  </div>
-
-  <div class="card">
+  <div class="card" style="grid-column:span 2;">
     <div class="card-accent accent-sage"></div>
     <div class="card-title">Brain Dump</div>
     <textarea class="note-pad" id="brainDump" placeholder="Everything rattling around up there…"></textarea>
