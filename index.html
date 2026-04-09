@@ -192,15 +192,15 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 .inner-divider { height:1px; background:var(–rule); margin:14px 0; }
 
 /* MEAL PLAN */
-.meal-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; }
-.meal-day { display:flex; flex-direction:column; gap:3px; }
-.meal-day-label { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); margin-bottom:2px; }
-.meal-day-label.today-label { color:var(–blush); }
-.meal-slot { display:flex; align-items:center; gap:5px; }
-.meal-slot-tag { font-family:‘DM Mono’,monospace; font-size:.48rem; letter-spacing:.06em; color:var(–rule); width:22px; flex-shrink:0; }
-.meal-slot input { font-family:‘Cormorant Garamond’,serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed var(–rule); outline:none; color:var(–ink); width:100%; padding:1px 0; transition:border-color .2s; }
+.meal-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; }
+.meal-day { display:flex; flex-direction:column; gap:4px; }
+.meal-day-label { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); margin-bottom:3px; padding-bottom:4px; border-bottom:1px solid var(–rule); }
+.meal-day-label.today-label { color:var(–blush); border-color:var(–blush); }
+.meal-slot { display:flex; flex-direction:column; gap:1px; }
+.meal-slot-tag { font-family:‘DM Mono’,monospace; font-size:.46rem; letter-spacing:.06em; color:var(–rule); }
+.meal-slot input { font-family:‘Cormorant Garamond’,serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed rgba(221,213,197,0.5); outline:none; color:var(–ink); width:100%; padding:2px 0; transition:border-color .2s; }
 .meal-slot input:focus { border-color:var(–blush); }
-.meal-slot input::placeholder { color:var(–rule); font-style:italic; }
+.meal-slot input::placeholder { color:var(–rule); font-style:italic; font-size:.75rem; }
 
 /* NANNY */
 .nanny-row { display:flex; align-items:center; gap:8px; padding:6px 0; border-bottom:1px solid var(–rule); }
@@ -217,6 +217,27 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
 .nanny-total-label { font-family:‘DM Mono’,monospace; font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); }
 .nanny-total-num { font-size:1.6rem; font-family:‘Cormorant Garamond’,serif; font-weight:300; color:var(–ink); }
 .nanny-total-sub { font-family:‘DM Mono’,monospace; font-size:.55rem; color:var(–light-ink); }
+
+/* VENTURE NEXT-UP EDITABLE */
+.venture-next-edit { display:block; outline:none; font-size:.82rem; line-height:1.45; font-style:italic; color:var(–light-ink); margin-top:2px; border-bottom:1px dashed transparent; transition:border-color .2s; min-height:1.2em; }
+.venture-next-edit:hover { border-color:var(–rule); }
+.venture-next-edit:focus { border-color:var(–terracotta); color:var(–ink); font-style:normal; }
+
+/* TV CALENDAR */
+.tv-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; }
+.tv-day { display:flex; flex-direction:column; gap:3px; }
+.tv-day-label { font-family:‘DM Mono’,monospace; font-size:.52rem; letter-spacing:.12em; text-transform:uppercase; color:var(–light-ink); margin-bottom:3px; padding-bottom:4px; border-bottom:1px solid var(–rule); }
+.tv-day-label.today-label { color:var(–dusty-blue); border-color:var(–dusty-blue); }
+.tv-show-item { display:flex; align-items:center; gap:4px; }
+.tv-show-check { width:11px; height:11px; border:1.5px solid var(–rule); border-radius:2px; flex-shrink:0; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:8px; transition:all .2s; }
+.tv-show-check.done { background:var(–dusty-blue); border-color:var(–dusty-blue); color:white; }
+.tv-show-text { font-family:‘Cormorant Garamond’,serif; font-size:.88rem; flex:1; color:var(–ink); line-height:1.3; cursor:pointer; }
+.tv-show-text.done { text-decoration:line-through; color:var(–light-ink); }
+.tv-show-del { background:none; border:none; cursor:pointer; color:var(–rule); font-size:.8rem; flex-shrink:0; transition:color .2s; }
+.tv-show-del:hover { color:var(–terracotta); }
+.tv-add-inp { font-family:‘Cormorant Garamond’,serif; font-size:.82rem; background:transparent; border:none; border-bottom:1px dashed rgba(221,213,197,0.6); outline:none; color:var(–ink); width:100%; padding:2px 0; margin-top:3px; }
+.tv-add-inp::placeholder { color:var(–rule); font-style:italic; font-size:.75rem; }
+.tv-add-inp:focus { border-color:var(–dusty-blue); }
 
 /* ANIMATIONS */
 @keyframes fadeDown { from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)} }
@@ -359,35 +380,15 @@ header { display:grid; grid-template-columns:1fr auto; align-items:end; border-b
   <div class="ventures-grid" id="venturesGrid"></div>
 </div>
 
-<!-- PROGRESS BARS -->
-
-<div class="g g-2 anim3" style="margin-top:24px;">
-
-  <div class="card">
-    <div class="card-accent accent-sage"></div>
-    <div class="card-title">Roamy — Build Progress</div>
-    <div id="roamyBar"></div>
-    <div class="inner-divider"></div>
-    <div class="card-title" style="margin-bottom:8px;">Milestones</div>
-    <div id="roamyMs"></div>
-  </div>
-
-  <div class="card">
-    <div class="card-accent accent-blue"></div>
-    <div class="card-title">Hip Hip — Build Progress</div>
-    <div id="hiphipBar"></div>
-    <div class="inner-divider"></div>
-    <div class="card-title" style="margin-bottom:8px;">Milestones</div>
-    <div id="hiphipMs"></div>
-  </div>
-
-</div>
-
 <!-- CREATIVE + IDEAS + PRESCHOOL -->
 
 <div class="g g-3 anim4">
 
   <div class="card">
+    <div class="card-accent accent-blue"></div>
+    <div class="card-title">TV This Week</div>
+    <div class="tv-grid" id="tvGrid"></div>
+  </div>
     <div class="card-accent accent-gold"></div>
     <div class="card-title">Creative Practice</div>
     <div class="creative-box">
@@ -488,70 +489,40 @@ document.getElementById('hdrDate').innerHTML =
 
 // ── VENTURES ──────────────────────────────────────────────────
 const VENTURES = [
-  {name:'Roamy',        em:false, tagline:'Kids activity finder · All of LA',      status:'active',   next:'Radius/zip filtering · Stripe tiers',       accent:'sage',       num:'01'},
-  {name:'MRCH',         em:false, tagline:'B2B SaaS pricing for beauty brands',  status:'active',   next:'Beta recruitment · Indie Beauty Expo list',  accent:'gold',       num:'02'},
-  {name:'Hip Hip',      em:false, tagline:'Kids birthday party planning app',    status:'building', next:'Email/SMS notifications · Gift tracker',     accent:'blue',       num:'03'},
-  {name:'JEUNE',        em:true,  tagline:"Luxury decor, your child as the artist",  status:'bg',       next:'Vendor outreach · Submission workflow',      accent:'blush',      num:'04'},
-  {name:'Herringbone',  em:false, tagline:'Taste-making editorial publication',  status:'bg',       next:'Write inaugural Florentine ring piece',      accent:'terracotta', num:'05'},
-  {name:'Kin Collective',em:false,tagline:'Membership community for parents',    status:'bg',       next:'Define alongside Roamy roadmap',             accent:'sage',       num:'06'},
+  {key:'roamy',    name:'Roamy',         em:false, tagline:'Kids activity finder · All of LA',        status:'active',   next:'Radius/zip filtering · Stripe tiers',      accent:'sage',       num:'01'},
+  {key:'mrch',     name:'MRCH',          em:false, tagline:'B2B SaaS pricing for beauty brands',      status:'active',   next:'Beta recruitment · Indie Beauty Expo list', accent:'gold',       num:'02'},
+  {key:'hiphip',   name:'Hip Hip',       em:false, tagline:'Kids birthday party planning app',        status:'building', next:'Email/SMS notifications · Gift tracker',    accent:'blue',       num:'03'},
+  {key:'jeune',    name:'JEUNE',         em:true,  tagline:'Luxury decor, your child as the artist',  status:'bg',       next:'Vendor outreach · Submission workflow',     accent:'blush',      num:'04'},
+  {key:'hb',       name:'Herringbone',   em:false, tagline:'Taste-making editorial publication',      status:'bg',       next:'Write inaugural Florentine ring piece',     accent:'terracotta', num:'05'},
+  {key:'kin',      name:'Kin Collective',em:false, tagline:'Membership community for parents',        status:'bg',       next:'Define alongside Roamy roadmap',            accent:'sage',       num:'06'},
 ];
 const SM={active:'Active',building:'Building',bg:'Background'};
 const DM={active:'dot-active',building:'dot-building',bg:'dot-bg'};
+
 VENTURES.forEach(v=>{
+  // Load saved next-up if user has edited it
+  const savedNext = ld('jana_vnext_'+v.key, null);
+  if (savedNext !== null) v.next = savedNext;
+
   const el=document.createElement('div');
   el.className='venture-card'; el.setAttribute('data-num',v.num);
   el.innerHTML=`<div class="card-accent accent-${v.accent}"></div>
     <div class="venture-name">${v.em?`<em>${v.name}</em>`:v.name}</div>
     <div class="venture-tagline">${v.tagline}</div>
     <div class="venture-status"><span class="status-dot ${DM[v.status]}"></span>${SM[v.status]}</div>
-    <div class="venture-next"><strong>Next Up</strong>${v.next}</div>`;
+    <div class="venture-next">
+      <strong>Next Up</strong>
+      <div contenteditable="true" class="venture-next-edit" data-key="${v.key}" spellcheck="false">${v.next}</div>
+    </div>`;
   document.getElementById('venturesGrid').appendChild(el);
 });
 
-// ── PROGRESS ──────────────────────────────────────────────────
-const PROG = {
-  roamy: { color:'fill-sage', ms:[
-    {l:'Core app build',d:true},{l:'28+ venue records',d:true},{l:'Multi-select filters',d:true},
-    {l:'Weekly calendar + .ics export',d:true},{l:'AI Surprise Me (Claude API)',d:true},
-    {l:'Mobile-first design',d:true},{l:'Radius/zip filtering',d:false},
-    {l:'Kid profiles',d:false},{l:'Stripe membership tiers',d:false},
-  ]},
-  hiphip: { color:'fill-blue', ms:[
-    {l:'Party dashboard',d:true},{l:'Budget tracker',d:true},{l:'Guest list',d:true},
-    {l:'Unified checklist w/ dates',d:true},{l:'AI theme generator',d:true},{l:'Onboarding flow',d:true},
-    {l:'Email/SMS notifications',d:false},{l:'Gift tracker',d:false},
-    {l:'AI thank-you note gen',d:false},{l:'Shoppable affiliate links',d:false},
-  ]}
-};
-
-function renderProg(key) {
-  const stored = ld('jana_prog_'+key, null);
-  if (stored) PROG[key].ms = stored;
-  const ms = PROG[key].ms;
-  const done = ms.filter(m=>m.d).length;
-  const pct = Math.round(done/ms.length*100);
-
-  document.getElementById(key+'Bar').innerHTML =
-    `<div class="prog-label-row"><span class="prog-label">${done} / ${ms.length} milestones</span><span class="prog-pct">${pct}%</span></div>
-     <div class="prog-track"><div class="prog-fill ${PROG[key].color}" style="width:${pct}%"></div></div>`;
-
-  const msEl = document.getElementById(key+'Ms');
-  msEl.innerHTML='';
-  ms.forEach((m,i)=>{
-    const r=document.createElement('div'); r.className='milestone-row';
-    r.innerHTML=`<div class="focus-check ${m.d?'done':''}" onclick="togMs('${key}',${i})">${m.d?'✓':''}</div>
-      <span style="font-size:.82rem;${m.d?'color:var(--light-ink);text-decoration:line-through;text-decoration-color:var(--rule);':''}">${m.l}</span>`;
-    msEl.appendChild(r);
-  });
-}
-
-function togMs(key,i) {
-  PROG[key].ms[i].d = !PROG[key].ms[i].d;
-  sv('jana_prog_'+key, PROG[key].ms);
-  renderProg(key);
-}
-
-renderProg('roamy'); renderProg('hiphip');
+// Save edits on blur
+document.getElementById('venturesGrid').addEventListener('blur', e=>{
+  if (e.target.classList.contains('venture-next-edit')) {
+    sv('jana_vnext_'+e.target.dataset.key, e.target.textContent.trim());
+  }
+}, true);
 
 // ── CREATIVE ──────────────────────────────────────────────────
 const PROMPTS = [
@@ -923,6 +894,59 @@ function saveNanny(day, field, val) {
 }
 
 renderNanny();
+
+// ── TV CALENDAR ───────────────────────────────────────────────
+let tvShows = ld('jana_tv', {});
+
+function renderTV() {
+  const grid = document.getElementById('tvGrid');
+  grid.innerHTML = '';
+  DAYS_SHORT.forEach((day, i) => {
+    const isToday = i === todayDow;
+    const shows = tvShows[day] || [];
+    const col = document.createElement('div');
+    col.className = 'tv-day';
+    const label = document.createElement('div');
+    label.className = 'tv-day-label' + (isToday ? ' today-label' : '');
+    label.textContent = day + (isToday ? ' ·' : '');
+    col.appendChild(label);
+    shows.forEach((s, si) => {
+      const row = document.createElement('div');
+      row.className = 'tv-show-item';
+      row.innerHTML = `<div class="tv-show-check ${s.done?'done':''}" onclick="togTV('${day}',${si})">${s.done?'✓':''}</div>
+        <span class="tv-show-text ${s.done?'done':''}" onclick="togTV('${day}',${si})">${s.name}</span>
+        <button class="tv-show-del" onclick="delTV('${day}',${si})">×</button>`;
+      col.appendChild(row);
+    });
+    const inp = document.createElement('input');
+    inp.className = 'tv-add-inp';
+    inp.placeholder = '+ show…';
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && inp.value.trim()) {
+        if (!tvShows[day]) tvShows[day] = [];
+        tvShows[day].push({name: inp.value.trim(), done: false});
+        sv('jana_tv', tvShows);
+        renderTV();
+      }
+    });
+    col.appendChild(inp);
+    grid.appendChild(col);
+  });
+}
+
+function togTV(day, i) {
+  tvShows[day][i].done = !tvShows[day][i].done;
+  sv('jana_tv', tvShows);
+  renderTV();
+}
+
+function delTV(day, i) {
+  tvShows[day].splice(i, 1);
+  sv('jana_tv', tvShows);
+  renderTV();
+}
+
+renderTV();
 
 // ── BABY NOTE ─────────────────────────────────────────────────
 const bn=document.getElementById('babyNote');
